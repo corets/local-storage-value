@@ -3,13 +3,14 @@ import {
   readLocalStorage,
   writeLocalStorage,
 } from "@corets/local-storage-helpers"
+import { CreateLocalStorageValue } from "./types"
 
 const cache: Record<string, ObservableValue> = {}
 
-export const createLocalValue = <TValue>(
-  storageKey: string,
-  initialValue: TValue
-): ObservableValue<TValue> => {
+export const createLocalStorageValue: CreateLocalStorageValue = <TValue>(
+  storageKey,
+  initialValue
+) => {
   let value = cache[storageKey] as ObservableValue<TValue>
 
   if (!value) {

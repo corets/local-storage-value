@@ -1,1 +1,2 @@
-export * from "./createLocalValue"
+export * from "./types"
+export * from "./createLocalStorageValue"
