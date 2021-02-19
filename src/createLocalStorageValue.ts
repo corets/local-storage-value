@@ -13,7 +13,7 @@ export const createLocalStorageValue: CreateLocalStorageValue = <TValue>(
 ) => {
   let value = cache[storageKey] as ObservableValue<TValue>
 
-  if (!value) {
+  if (value === undefined) {
     value = createValue(readLocalStorage(storageKey, initialValue) as TValue)
     value.listen((newValue) => writeLocalStorage(storageKey, newValue))
     cache[storageKey] = value
