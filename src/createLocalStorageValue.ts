@@ -15,7 +15,9 @@ export const createLocalStorageValue: CreateLocalStorageValue = <TValue>(
 
   if (value === undefined) {
     value = createValue(readLocalStorage(storageKey, initialValue) as TValue)
-    value.listen((newValue) => writeLocalStorage(storageKey, newValue))
+    value.listen((newValue) => writeLocalStorage(storageKey, newValue), {
+      immediate: true,
+    })
     cache[storageKey] = value
   }
 

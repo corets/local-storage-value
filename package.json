@@ -32,8 +32,8 @@
     "devrelease": "np prerelease --no-release-draft --tag dev"
   },
   "dependencies": {
-    "@corets/local-storage-helpers": "^0.0.1-2",
-    "@corets/value": "^0.0.1-4"
+    "@corets/local-storage-helpers": "^0.0.1-4",
+    "@corets/value": "^0.0.1-14"
   },
   "devDependencies": {
     "@types/jest": "^25.1.4",
