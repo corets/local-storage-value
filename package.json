@@ -21,7 +21,7 @@
     "/dist"
   ],
   "repository": "github:corets/local-storage-value",
-  "homepage": "https://corets.github.io/local-storage-value",
+  "homepage": "https://docs.corets.io/observables/local-storage-value",
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org"
